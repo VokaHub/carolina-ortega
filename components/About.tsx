@@ -26,7 +26,7 @@ const About: React.FC = () => {
               </p>
               <div className="pt-4">
                 <p className="font-semibold text-[#353C51] mb-6 text-sm uppercase tracking-widest">Acompañamiento en:</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-base">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-base border-b border-[#DDE6ED] pb-8 mb-8">
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#B2977B]" /> Ansiedad
                   </div>
@@ -38,6 +38,18 @@ const About: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#B2977B]" /> Rupturas de pareja
+                  </div>
+                </div>
+
+                {/* Información de modalidad integrada aquí para mayor sentido contextual */}
+                <div className="flex flex-wrap items-center gap-6 md:gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-[#353C51]/40">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full border border-[#B2977B]"></div>
+                    Atención Presencial
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full border border-[#B2977B]"></div>
+                    Atención Online
                   </div>
                 </div>
               </div>

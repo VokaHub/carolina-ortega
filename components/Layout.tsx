@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import MindfulBreak from './MindfulBreak';
 
@@ -58,11 +57,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     };
   }, []);
 
-  // Etapas emocionales:
-  // 0-20%: Preocupado (Hero)
-  // 20-45%: Sonrisa leve (Trayectoria)
-  // 45-75%: Sonrisa clara (Recurso)
-  // 75-100%: RADIANTE (Se adelanta para asegurar felicidad plena en la sección "¿Hablamos?")
   const getStage = () => {
     if (scrollProgress < 0.20) return 0; 
     if (scrollProgress < 0.45) return 1; 
@@ -74,7 +68,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F8F7F3] selection:bg-[#B2977B]/30 antialiased">
-      {/* Header con logo imponente y bajado para centrarlo visualmente */}
       <header className="sticky top-0 z-50 bg-[#F8F7F3]/90 backdrop-blur-md border-b border-[#353C51]/5 h-20 md:h-24 flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full flex items-center">
           <img 
@@ -85,7 +78,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </header>
 
-      {/* PERSONAJE GORDITO CUTE */}
       <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[60] flex flex-col items-center group">
         <button 
           onClick={() => setIsBreakOpen(true)}
@@ -138,7 +130,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </button>
         
-        <span className="mt-3 text-[10px] uppercase tracking-[0.4em] font-black text-[#353C51]/30 group-hover:text-[#353C51] transition-all select-none">
+        {/* Texto 'Tócame' con opacidad incrementada de /60 a /90 para mayor fuerza visual */}
+        <span className="mt-3 text-[10px] uppercase tracking-[0.4em] font-black text-[#353C51]/90 group-hover:text-[#353C51] transition-all select-none">
           Tócame
         </span>
       </div>

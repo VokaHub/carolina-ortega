@@ -15,7 +15,7 @@ const About: React.FC = () => {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#B2977B] -z-10 hidden md:block" />
           </div>
           <div className="py-8">
-            <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[10px] mb-4 block">Psicóloga Clínica</span>
+            <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[11px] mb-4 block">Psicóloga Clínica</span>
             <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-[#353C51]">Carolina Ortega</h2>
             <div className="space-y-6 text-[#353C51]/80 text-lg font-light leading-relaxed">
               <p>

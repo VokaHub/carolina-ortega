@@ -5,7 +5,7 @@ const FinalCTA: React.FC = () => {
   return (
     <section id="final-cta" className="py-24 border-t border-[#DDE6ED] scroll-mt-24 bg-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="inline-block bg-[#DDE6ED] text-[#353C51] text-[9px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-8">
+        <span className="inline-block bg-[#DDE6ED] text-[#353C51] text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-8">
           ¿Hablamos?
         </span>
         <h3 className="text-3xl md:text-5xl font-semibold text-[#353C51] mb-6 leading-tight">
@@ -27,7 +27,7 @@ const FinalCTA: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <div className="text-[#B2977B] text-[10px] font-bold uppercase tracking-[0.2em]">
+          <div className="text-[#B2977B] text-[11px] font-bold uppercase tracking-[0.2em]">
             20% de descuento en tu primera sesión
           </div>
         </div>

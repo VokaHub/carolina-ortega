@@ -23,7 +23,6 @@ const ThankYou: React.FC<ThankYouProps> = ({ feeling }) => {
 
   return (
     <div className="flex flex-col text-center bg-white">
-      {/* Sección Superior: Limpia con el ícono y frase original */}
       <div className="p-8 md:p-12">
         <div className="w-12 h-12 bg-[#DDE6ED] rounded-full flex items-center justify-center mx-auto mb-5">
           <svg className="w-6 h-6 text-[#353C51]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,14 +43,13 @@ const ThankYou: React.FC<ThankYouProps> = ({ feeling }) => {
             href={DOWNLOAD_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-4 bg-[#B2977B] text-white font-bold rounded-sm hover:bg-[#B2977B]/90 transition-all shadow-lg flex items-center justify-center gap-3 uppercase tracking-widest text-[9px] active:scale-[0.98] cursor-pointer"
+            className="w-full py-4 bg-[#B2977B] text-white font-bold rounded-sm hover:bg-[#B2977B]/90 transition-all shadow-lg flex items-center justify-center gap-3 uppercase tracking-widest text-[10px] active:scale-[0.98] cursor-pointer"
           >
             Descargar E-book
           </a>
         </div>
       </div>
 
-      {/* Sección Inferior: El fondo suave original #DDE6ED/40 */}
       <div className="bg-[#DDE6ED]/40 p-8 md:p-10 border-t border-[#DDE6ED]">
         <div className="max-w-xl mx-auto">
           <p className="text-[#353C51] text-base md:text-lg font-medium mb-6 leading-relaxed italic">
@@ -61,11 +59,11 @@ const ThankYou: React.FC<ThankYouProps> = ({ feeling }) => {
           <div className="flex flex-col items-center gap-3">
             <a 
               href="https://wa.me/1234567890" 
-              className="w-full max-w-[260px] py-4 px-6 bg-[#353C51] text-white font-semibold rounded-sm hover:bg-[#353C51]/90 transition-all shadow-lg flex items-center justify-center gap-3 text-[10px] uppercase tracking-widest cursor-pointer"
+              className="w-full max-w-[260px] py-4 px-6 bg-[#353C51] text-white font-semibold rounded-sm hover:bg-[#353C51]/90 transition-all shadow-lg flex items-center justify-center gap-3 text-[11px] uppercase tracking-widest cursor-pointer"
             >
               Agendar con 20% DTO
             </a>
-            <span className="text-[#B2977B] text-[9px] font-black uppercase tracking-[0.2em] animate-pulse">
+            <span className="text-[#B2977B] text-[10px] font-black uppercase tracking-[0.2em] animate-pulse">
               Descuento aplicado automáticamente
             </span>
           </div>

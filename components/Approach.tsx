@@ -25,7 +25,7 @@ const Approach: React.FC = () => {
     <section id="enfoque" className="pt-16 pb-24 bg-[#F8F7F3] scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <div className="max-w-2xl">
-          <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[9px] mb-4 block">Metodología</span>
+          <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[10px] mb-4 block">Metodología</span>
           <h2 className="text-3xl md:text-5xl font-semibold text-[#353C51] mb-6">Un proceso honesto y estructurado.</h2>
           <p className="text-lg text-[#353C51]/60 font-light leading-relaxed">
             Mi enfoque busca resultados reales basados en el compromiso mutuo y la constancia.

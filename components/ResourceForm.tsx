@@ -11,10 +11,6 @@ const ResourceForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  /**
-   * CONFIGURACIÓN DEL FORMULARIO DE GOOGLE:
-   * IDs validados del enlace proporcionado por el usuario.
-   */
   const FORM_ID = "1FAIpQLSdiulvO_ILcYbU3ikZet_U96tnQbvZeuo3RYjbJU3Mv3RsSmQ";
   const ID_EMAIL = "entry.281206423"; 
   const ID_SENTIMIENTO = "entry.266669482"; 
@@ -22,23 +18,13 @@ const ResourceForm: React.FC = () => {
   const GOOGLE_FORM_ACTION = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
 
   const handleSubmit = () => {
-    // 1. Iniciamos el estado de carga visual
     setLoading(true);
-
-    /**
-     * 2. LÓGICA DE TRANSICIÓN PREDICTIVA:
-     * El formulario se envía de forma nativa al iframe oculto (target="hidden_google_frame").
-     * En lugar de esperar un evento 'onLoad' que puede fallar por políticas de seguridad,
-     * disparamos el cambio de UI tras 1 segundo, tiempo suficiente para que el POST se inicie.
-     */
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-      
-      // 3. Scroll suave para centrar la confirmación
       const element = document.getElementById('recurso');
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }, 1000);
   };
@@ -55,7 +41,6 @@ const ResourceForm: React.FC = () => {
     <section id="recurso" className="py-20 bg-[#F8F7F3] scroll-mt-24">
       <div className="max-w-4xl mx-auto px-6">
         
-        {/* IFRAME SILENCIOSO: Recibe el envío sin interferir con la UI de React */}
         <iframe
           name="hidden_google_frame"
           id="hidden_google_frame"
@@ -69,16 +54,14 @@ const ResourceForm: React.FC = () => {
           </div>
         ) : (
           <div className="bg-[#353C51] rounded-sm overflow-hidden flex flex-col shadow-2xl">
-            {/* Cabecera del recurso */}
             <div className="p-10 md:p-12 text-center border-b border-white/5">
-              <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[9px] mb-3 block">Recurso Gratuito</span>
+              <span className="text-[#B2977B] font-bold tracking-[0.2em] uppercase text-[10px] mb-3 block">Recurso Gratuito</span>
               <h2 className="text-[#F8F7F3] text-3xl md:text-5xl font-semibold mb-5 italic">100 preguntas para reencontrarte.</h2>
               <p className="text-[#F8F7F3]/70 text-base md:text-lg font-light max-w-lg mx-auto leading-relaxed">
                 Una guía de autorreflexión diseñada para ayudarte a recuperar tu centro y sanar tras una ruptura.
               </p>
             </div>
 
-            {/* Formulario de captura */}
             <div className="bg-white p-8 md:p-12">
               <form 
                 action={GOOGLE_FORM_ACTION}
@@ -88,7 +71,7 @@ const ResourceForm: React.FC = () => {
                 className="max-w-md mx-auto space-y-6"
               >
                 <div className="space-y-1">
-                  <label className="text-[9px] uppercase tracking-widest font-bold text-[#353C51]/40">Tu mejor Email</label>
+                  <label className="text-[10px] uppercase tracking-widest font-bold text-[#353C51]/40">Tu mejor Email</label>
                   <input 
                     type="email" 
                     name={ID_EMAIL}
@@ -101,7 +84,7 @@ const ResourceForm: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[9px] uppercase tracking-widest font-bold text-[#353C51]/40">¿Qué has sentido más últimamente?</label>
+                  <label className="text-[10px] uppercase tracking-widest font-bold text-[#353C51]/40">¿Qué has sentido más últimamente?</label>
                   <div className="relative">
                     <select 
                       name={ID_SENTIMIENTO}
@@ -128,10 +111,10 @@ const ResourceForm: React.FC = () => {
                   </button>
                   
                   <div className="text-center space-y-3">
-                    <p className="text-[10px] text-[#353C51]/50 leading-relaxed max-w-[340px] mx-auto">
+                    <p className="text-[11px] text-[#353C51]/50 leading-relaxed max-w-[340px] mx-auto">
                       Al descargar aceptas recibir contenido terapéutico y novedades.
                     </p>
-                    <p className="text-[9px] text-[#B2977B] uppercase tracking-[0.2em] font-black">🔒 Privacidad 100% garantizada</p>
+                    <p className="text-[10px] text-[#B2977B] uppercase tracking-[0.2em] font-black">🔒 Privacidad 100% garantizada</p>
                   </div>
                 </div>
               </form>
@@ -139,13 +122,6 @@ const ResourceForm: React.FC = () => {
           </div>
         )}
       </div>
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
-      `}} />
     </section>
   );
 };

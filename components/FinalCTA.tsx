@@ -17,7 +17,7 @@ const FinalCTA: React.FC = () => {
         
         <div className="flex flex-col items-center gap-6">
           <a 
-            href="https://wa.me/1234567890" 
+            href="https://wa.me/50232448037" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-4 px-10 py-5 bg-[#353C51] text-white rounded-sm font-semibold hover:bg-[#353C51]/95 transition-all shadow-xl active:scale-[0.98]"

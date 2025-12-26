@@ -58,7 +58,7 @@ const ThankYou: React.FC<ThankYouProps> = ({ feeling }) => {
           
           <div className="flex flex-col items-center gap-3">
             <a 
-              href="https://wa.me/1234567890" 
+              href="https://wa.me/50232448037" 
               className="w-full max-w-[260px] py-4 px-6 bg-[#353C51] text-white font-semibold rounded-sm hover:bg-[#353C51]/90 transition-all shadow-lg flex items-center justify-center gap-3 text-[11px] uppercase tracking-widest cursor-pointer"
             >
               Agendar con 20% DTO

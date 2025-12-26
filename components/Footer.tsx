@@ -19,10 +19,12 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold mb-6 uppercase text-[11px] tracking-widest border-b border-white/10 pb-2 inline-block">Contacto</h4>
             <div className="text-sm space-y-4 font-light">
               <p className="flex items-center gap-3">
-                <span className="text-[#B2977B] font-bold">WhatsApp:</span> +1 234 567 890
+                <span className="text-[#B2977B] font-bold">WhatsApp:</span> 
+                <a href="https://wa.me/50232448037" target="_blank" rel="noopener noreferrer" className="hover:text-[#F8F7F3] transition-colors">+502 3244 8037</a>
               </p>
               <p className="flex items-center gap-3">
-                <span className="text-[#B2977B] font-bold">Email:</span> contacto@carolinaortega.com
+                <span className="text-[#B2977B] font-bold">Email:</span> 
+                <a href="mailto:carolortegaj@gmail.com" className="hover:text-[#F8F7F3] transition-colors">carolortegaj@gmail.com</a>
               </p>
             </div>
           </div>
